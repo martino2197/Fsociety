@@ -10,7 +10,7 @@ import { JobCard, JobImage, JobCardContainer } from "./styles";
 export const OfferCard = (props) => {
   return (
     <JobCard onClick={() => console.log("hola")}>
-      <JobImage />
+      <JobImage src="/image/oferta.jpg" />
       <JobCardContainer>
         <p class="container__title">{props.offer.title}</p>
         <p class="container__city a">{props.offer.country}</p>

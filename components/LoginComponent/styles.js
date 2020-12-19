@@ -26,7 +26,7 @@ export const LoginBox = styled.div`
   align-items: center;
 `;
 
-export const LoginButton = styled(Link)`
+export const LoginButton = styled.button`
   height: 40px;
   width: 100px;
   border-radius: 10px;

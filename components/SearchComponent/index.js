@@ -1,6 +1,6 @@
 // ------------------------------ import libraries
-import React from "react";
-
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 // ------------------------------ import styles and images
 import {
   SearchBarContainer,
@@ -14,16 +14,37 @@ import {
 // ------------------------------------ COMPONENT ------------------------------------//
 
 export const SearchComponent = () => {
+  const router = useRouter();
+  const [search, setSearch] = useState("");
+
+  function handleInput(e) {
+    setSearch(
+      e.target.value[0].toUpperCase() + e.target.value.slice(1).toLowerCase()
+    );
+  }
+  function handleSearch() {
+    router.push({
+      pathname: "/Home",
+      state: { search },
+    });
+    // searchExperiences(search);
+  }
   return (
     <SearchBarContainer>
       <SearchBar>
-        <div>
+        <form onSubmit={handleSearch}>
           <span></span>
-          <input type="text" placeholder="Search" />
-        </div>
+          <input
+            aria-label="Job"
+            type="text"
+            name="title"
+            placeholder="Search Job"
+            onChange={handleInput}
+          />
+        </form>
       </SearchBar>
       <SearchFilter>
-        <div>
+        {/* <div>
           <button>Tipo De Vacante</button>
         </div>
         <div>
@@ -31,7 +52,7 @@ export const SearchComponent = () => {
         </div>
         <div>
           <button>Ubicación</button>
-        </div>
+        </div> */}
         {/* <div className="dropdown">
           <ButtonSelector type="button" data-toggle="dropdown">
             Tipo

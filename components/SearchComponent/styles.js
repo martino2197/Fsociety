@@ -25,7 +25,7 @@ export const SearchBar = styled.section`
   align-items: center;
   margin-bottom: 50px;
 
-  div {
+  form {
     width: 525px;
     border-radius: 5px;
     background-color: #ffffff;

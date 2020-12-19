@@ -23,7 +23,7 @@ const Home = (props) => {
           </IndexLogo>
           <h1>Talent Placement</h1>
           {console.log(props.offers)}
-          <Favorites>Favoritos</Favorites>
+          {/* <Favorites>Favoritos</Favorites> */}
         </IndexHeader>
         <SearchComponent />
         <MainComponent offers={props.offers} />
