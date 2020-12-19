@@ -15,7 +15,7 @@ export const LoginComponent = () => {
         <p>User Name</p>
         <input />
         <p>Password</p>
-        <input type="paaword" />
+        <input type="password" />
         <a>Forgot your Password?</a>
       </LoginForm>
       <LoginButton href="/Home">LOGIN</LoginButton>
