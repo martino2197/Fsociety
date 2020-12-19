@@ -15,10 +15,10 @@ export const LoginComponent = () => {
         <p>User Name</p>
         <input />
         <p>Password</p>
-        <input />
+        <input type="password" />
         <a>Forgot your Password?</a>
       </LoginForm>
-      <LoginButton>LOGIN</LoginButton>
+      <LoginButton href="/Home">LOGIN</LoginButton>
     </LoginBox>
   );
 };

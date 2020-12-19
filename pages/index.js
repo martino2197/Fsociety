@@ -1,29 +1,24 @@
 import React from "react";
+import { LoginComponent } from "../components/LoginComponent";
+import Image from "next/image";
 
-import { SearchComponent } from "../components/SearchComponent";
-// import { LoginComponent } from "../components/LoginComponent";
 import {
-  IndexContainer,
-  IndexHeader,
-  IndexLogo,
-  Favorites,
-} from "../components/PagesStyles/indexStyles";
-import { MainComponent } from "../components/MainComponent";
+  LoginContainer,
+  LoginLogo,
+} from "../components/PagesStyles/loginStyles";
 
-const Home = () => {
+// import Image from "../../assets/image";
+// const dev = require("/dev.jpg");
+
+const LoginPage = () => {
   return (
-    <IndexContainer>
-      <IndexHeader>
-        <IndexLogo>
-          <img src="/image/logo2.png" alt="Platzi Logo" />
-        </IndexLogo>
-        <h1>Talent Placement</h1>
-        <Favorites>Favoritos</Favorites>
-      </IndexHeader>
-      <SearchComponent />
-      <MainComponent />
-    </IndexContainer>
+    <LoginContainer>
+      <LoginLogo>
+        <img src="/image/logo2.png" alt="Platzi Logo" />
+      </LoginLogo>
+      <LoginComponent />
+    </LoginContainer>
   );
 };
 
-export default Home;
+export default LoginPage;
