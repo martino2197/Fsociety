@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const IndexContainer = styled.div`
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #f5f5fb;
   display: flex;
   flex-direction: column;

@@ -7,14 +7,14 @@ import { JobCard, JobImage, JobCardContainer } from "./styles";
 
 // ------------------------------------ COMPONENT ------------------------------------//
 
-export const OfferCard = () => {
+export const OfferCard = (props) => {
   return (
-    <JobCard>
+    <JobCard onClick={() => console.log("hola")}>
       <JobImage />
       <JobCardContainer>
-        <p class="container__title">Job</p>
-        <p class="container__city a">City</p>
-        <p class="container__date a">Date</p>
+        <p class="container__title">{props.offer.title}</p>
+        <p class="container__city a">{props.offer.country}</p>
+        <p class="container__date a">{props.offer.date}</p>
       </JobCardContainer>
     </JobCard>
   );

@@ -10,13 +10,14 @@ import {
   OfferHeaderInfo,
   Info,
   Pa,
+  Pb,
   OfferHeaderButton,
 } from "./styles";
 // import { Rate } from "../Rate";
 
 // ------------------------------------ COMPONENT ------------------------------------//
 
-export const Offer = () => {
+export const Offer = (props) => {
   return (
     <OfferContainer>
       <OfferHeader>
@@ -27,22 +28,22 @@ export const Offer = () => {
           <Info>
             <img src="" alt="" />
             <div>
-              <Pa>Job</Pa>
-              <p>Senior</p>
+              <Pa>{props.openOffer.title}</Pa>
+              <Pb>{props.openOffer.category}</Pb>
             </div>
           </Info>
           <Info>
             <img src="" alt="" />
             <div>
-              <Pa>Job</Pa>
-              <p>Senior</p>
+              <Pa>{props.openOffer.company}</Pa>
+              <Pb>{props.openOffer.date}</Pb>
             </div>
           </Info>
           <Info>
             <img src="" alt="" />
             <div>
-              <Pa>Job</Pa>
-              <p>Senior</p>
+              <Pa>{props.openOffer.country}</Pa>
+              <Pb>{props.openOffer.location}</Pb>
             </div>
           </Info>
         </OfferHeaderInfo>
@@ -51,6 +52,7 @@ export const Offer = () => {
         </OfferHeaderButton>
       </OfferHeader>
       <OfferContent>
+        <p>{props.openOffer.description}</p>
         <p>
           About GBM We are a wealth & asset management and private banking
           organization with 35 years of experience, innovative digital

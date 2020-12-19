@@ -9,18 +9,16 @@ import { MainContainer, SectionLeft, SectionRight } from "./styles";
 
 // ------------------------------------ COMPONENT ------------------------------------//
 
-export const MainComponent = () => {
+export const MainComponent = (props) => {
   return (
     <MainContainer>
       <SectionLeft>
-        <OfferCard />
-        <OfferCard />
-        <OfferCard />
-        <OfferCard />
-        <OfferCard />
+        {props.offers.map((props) => (
+          <OfferCard offer={props} />
+        ))}
       </SectionLeft>
       <SectionRight>
-        <Offer />
+        <Offer openOffer={props.offers[10]} />
       </SectionRight>
     </MainContainer>
   );
