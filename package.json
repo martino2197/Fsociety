@@ -1,0 +1,32 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fsociety-Hackaton/frontend.git"
+  },
+  "keywords": [],
+  "author": "Luis Martin Maceda <martino2197@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Fsociety-Hackaton/frontend/issues"
+  },
+  "homepage": "https://github.com/Fsociety-Hackaton/frontend#readme",
+  "dependencies": {
+    "next": "^10.0.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0"
+  }
+}
